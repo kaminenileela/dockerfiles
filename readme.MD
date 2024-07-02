@@ -36,4 +36,4 @@ By enabling the port, we need to open host port that can redirect traffic to con
 
 docker run -d -p <host-port>:<container-port>
 docker run -d -p 80:80 nginx --->host port our wish ---> container port is fix
-ex: docker run -d -p 8000:80 nginx--->if we do <aws instance ip address:8000> -->we get access 
+* ex: docker run -d -p 8000:80 nginx--->if we do <aws instance ip address:8000> -->we get access 
