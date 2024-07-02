@@ -1,11 +1,11 @@
 To install docker on RHEL
 
-sudo yum install -y yum-utils
-sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl start docker
-systemctl status docker
-systemctl enable docker 
+* sudo yum install -y yum-utils
+* sudo yum-config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+* sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+* sudo systemctl start docker
+* systemctl status docker
+* systemctl enable docker 
 
 some docker we need to run--- come out of root and run them
 when docker is installed, it will create docker group.Users who r in docker group or root user can only run docker commands 
