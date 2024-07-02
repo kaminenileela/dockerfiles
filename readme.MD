@@ -30,6 +30,8 @@ then logout of system and then login to run docker commands
 * docker run nginx ---> this runs in foreground
 * docker run -d nginx ---> to run in background
 
+![alt text](docker.JPG)
+
 server has 65535 ports, even docker container has 65535 ports.
 How can you access docker container from internet?
 By enabling the port, we need to open host port that can redirect traffic to container.
