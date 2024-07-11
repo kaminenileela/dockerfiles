@@ -55,6 +55,14 @@ It is declarative way of creating custom images. keep all the instructions in a 
 
 docker build -t url/username/image-name:tag . ( dot represents current directory. by default docker build command checks for docker file)
 
+* instructions
+
+FROM:
+from should be the fitrst instruction to represent base OS
+FROM image-name:tag
+
+RUN:
+we will use RUN instruction to install packages and configure them. RUN instruction will execute at the time of image creation.
 
 
 
