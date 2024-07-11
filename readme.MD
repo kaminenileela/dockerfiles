@@ -1,3 +1,7 @@
+Docker image == Bare minimum OS + App run time + system packages and dependencies + App code = image
+Docker container == running instance of image is called container.
+
+
 To install docker on RHEL
 
 * sudo yum install -y yum-utils
@@ -12,8 +16,8 @@ when docker is installed, it will create docker group.Users who r in docker grou
 * usermod  -aG docker ec2-user--> to add user to secondary group usermod -aG <group name> <username>
 then logout of system and then login to run docker commands
 
-* docker ps ----> it wil show running containers
-* dker ps -a ---> all containers with any status
+* docker ps ----> it will show running containers
+* docker ps -a ---> all containers with any status
 * docker images ---> list down the images
 * docker pull nginx ---> to take images from docker hub
 * username, image name and version ----> TAG is version
@@ -28,7 +32,7 @@ then logout of system and then login to run docker commands
 * docker rmi `docker images -a -q`---> to delete all images
 * docker rm `docker ps -a -q` ---> to delete all containers
 * docker run nginx ---> this runs in foreground
-* docker run -d nginx ---> to run in background
+* docker run -d nginx ---> to run in background (also called detach mode)
 
 ![alt text](docker.JPG)
 
@@ -39,3 +43,19 @@ By enabling the port, we need to open host port that can redirect traffic to con
 docker run -d -p <host-port>:<container-port>
 docker run -d -p 80:80 nginx --->host port our wish ---> container port is fix
 * ex: docker run -d -p 8000:80 nginx--->if we do <aws instance ip address:8000> -->we get access 
+
+docker logs <container id> ---> to see logs of container 
+docker logs -f <container id> ---> -f is follow the logs of container 
+docker inspect <container id> ---> we will get full information of container 
+docker inspect <image id> ---> to get information of image 
+docker exec -it <container id> bash (execute interactive terminal)---> 
+
+* Docker file 
+It is declarative way of creating custom images. keep all the instructions in a file (i.e docker file) and build the image.
+
+docker build -t url/username/image-name:tag . ( dot represents current directory. by default docker build command checks for docker file)
+
+
+
+
+
