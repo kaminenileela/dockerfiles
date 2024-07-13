@@ -58,11 +58,47 @@ docker build -t url/username/image-name:tag . ( dot represents current directory
 * instructions
 
 FROM:
-from should be the fitrst instruction to represent base OS
+from should be the first instruction to represent base OS
 FROM image-name:tag
+
+docker build -t FROM:1.0 .
 
 RUN:
 we will use RUN instruction to install packages and configure them. RUN instruction will execute at the time of image creation.
+
+CMD:
+This instruction will run at the time of container creation.
+
+systemctl start backend --> then only you can access backend application.
+whatever the instruction you give in image to run as container,should run for infinite time.
+
+LABEL:
+This instruction is used for filtering. 
+docker images -f label=course=devops
+
+EXPOSE:
+expose instruction will let the users know what are the ports used by image or container.This instruction does not have any functionality. This does not open the port.This is used only for informational purpose.
+
+docker inspect <image id>  ---> shows exposed ports.
+
+How to push image to docker hub?
+you can push images to docker hub, nexus, ECR, jfrog etc
+url/username/image-name:tag
+
+docker push leelakamineni/label:1.0
+
+docker tag label:1.0 joindevops/label----> retagging
+
+docker login---> give username and password for pushing
+
+docker pull joindevops/label:v1.0.0 ---> for pulling the image
+
+
+
+
+
+
+
 
 
 
