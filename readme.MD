@@ -93,6 +93,10 @@ docker login---> give username and password for pushing
 
 docker pull joindevops/label:v1.0.0 ---> for pulling the image
 
+ENV:
+
+
+
 
 
 
