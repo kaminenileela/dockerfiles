@@ -126,6 +126,10 @@ ARG:
 3. you can always have default values to arg and override if required.
 
 ENV vs ARG
+1. ENV variables can be accessed both at the build time and run time of containers.
+2. ARG instruction can only be accessed at the time of build or image 
+
+How can i access arg inside container?
 
 
 
