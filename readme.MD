@@ -118,6 +118,14 @@ USER:
 Bestpractices: we should not let containers run with root access
 
 WORKDIR:
+if we give cd in run instruction it will not work. so we can set working directory using WORKDIR instruction.
+
+ARG:
+1. ARG can be first instruction in only one case.It can be used to supply the version for FROM instruction.
+2. You can have args in Dockerfile, you can supply the values through command through option --build-args
+3. you can always have default values to arg and override if required.
+
+ENV vs ARG
 
 
 
