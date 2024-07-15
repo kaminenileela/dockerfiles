@@ -130,7 +130,11 @@ ENV vs ARG
 2. ARG instruction can only be accessed at the time of build or image 
 
 How can i access arg inside container?
+we can give arg variable and also ENV giving variable so that we can access inside container.
 
+
+ONBUILD:
+When anyone using the image that i build as their base image then they should have index.html as per the code written.
 
 
 
