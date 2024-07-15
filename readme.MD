@@ -98,21 +98,25 @@ docker pull joindevops/label:v1.0.0 ---> for pulling the image
 ENV:
 
 COPY vs ADD
-------------
 COPY and ADD both are to copy the files from workspace to docker image. but add have two extra advantages.
 1. It can directly download the content from internet into the image
 2. It can directly untart the files into the image 
 
 ENTRYPOINT:
-
 CMD instruction can be overridden.
 docker ps -a --no-trunc ---> gives all info without cut.
 same instruction trying to override with ENTRYPOINT is not working.you cant override ENTRYPOINT, if you try to do it will go append and we get error. 
 
 CMD VS ENTRYPOINT:
-
 you can mix cmd and entrypoint for better results. CMD is used to supply default arguments to ENTRYPOINT.
+we can always override default args from runtime.
 As CMD instruction can be overridden. we can give docker run entrypoint:1.0.0 yahoo.com and container will ping yahoo.com.
+
+USER:
+
+
+
+
 
 
 
