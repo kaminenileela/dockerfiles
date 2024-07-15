@@ -33,6 +33,8 @@ then logout of system and then login to run docker commands
 * docker rm `docker ps -a -q` ---> to delete all containers
 * docker run nginx ---> this runs in foreground
 * docker run -d nginx ---> to run in background (also called detach mode)
+* docker run -d <image id> ---> to run in background
+
 
 ![alt text](docker.JPG)
 
@@ -113,8 +115,7 @@ we can always override default args from runtime.
 As CMD instruction can be overridden. we can give docker run entrypoint:1.0.0 yahoo.com and container will ping yahoo.com.
 
 USER:
-
-
+Bestpractices: we should not let containers run with root access
 
 
 
