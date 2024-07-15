@@ -135,6 +135,7 @@ we can give arg variable and also ENV giving variable so that we can access insi
 
 ONBUILD:
 When anyone using the image that i build as their base image then they should have index.html as per the code written.
+This is  useful as a trigger, if some one is trying to use your image. you can force them to keep somefiles in their workspace or some configuration
 
 
 
