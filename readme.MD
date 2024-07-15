@@ -117,6 +117,8 @@ As CMD instruction can be overridden. we can give docker run entrypoint:1.0.0 ya
 USER:
 Bestpractices: we should not let containers run with root access
 
+WORKDIR:
+
 
 
 
