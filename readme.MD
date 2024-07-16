@@ -45,6 +45,7 @@ By enabling the port, we need to open host port that can redirect traffic to con
 docker run -d -p <host-port>:<container-port>
 docker run -d -p 80:80 nginx --->host port our wish ---> container port is fix
 * ex: docker run -d -p 8000:80 nginx--->if we do <aws instance ip address:8000> -->we get access 
+docker run -d -p 3306:3306 --name mysql <image-name>
 
 docker logs <container id> ---> to see logs of container 
 docker logs -f <container id> ---> -f is follow the logs of container 
@@ -136,6 +137,27 @@ we can give arg variable and also ENV giving variable so that we can access insi
 ONBUILD:
 When anyone using the image that i build as their base image then they should have index.html as per the code written.
 This is  useful as a trigger, if some one is trying to use your image. you can force them to keep somefiles in their workspace or some configuration
+
+Docker home directory: /var/lib/docker
+
+![alt text](<docker network.JPG>)
+
+default docker network (which is like modem),gives ip address to every container.
+But using default network, you cannot communicate between containers
+
+but using docker network command we can create, list, inspect networks
+
+docker inspect ls--> gives list 
+
+we have bridge and host network when we do ls. docker uses bridge network to connect to containers.
+but we can connect containers to the host using host network (which is not so good).
+
+
+docker network create expense (create an expense network which is bridge, as docker uses bridge by default).
+
+you can also check networks on VM using ifconfig command.
+
+docker run -d -p 3306:3306 --name mysql --network expense mysql:1.0
 
 
 
