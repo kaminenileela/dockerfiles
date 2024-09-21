@@ -52,6 +52,11 @@ docker logs -f <container id> ---> -f is follow the logs of container
 docker inspect <container id> ---> we will get full information of container 
 docker inspect <image id> ---> to get information of image 
 docker exec -it <container id> bash (execute interactive terminal)---> 
+docker system prune -y  ---> removing cache
+docker builder prune
+docker image prune
+
+
 
 * Docker file 
 It is declarative way of creating custom images. keep all the instructions in a file (i.e docker file) and build the image.
@@ -79,7 +84,7 @@ there should be only one CMD instruction.
 
 LABEL:
 This instruction is used for filtering. 
-docker images -f label=course=devops
+docker images -f label=course=devops (-f is filter, when we do docker images --help we get options)
 
 EXPOSE:
 expose instruction will let the users know what are the ports used by image or container.This instruction does not have any functionality. This does not open the port.This is used only for informational purpose.
